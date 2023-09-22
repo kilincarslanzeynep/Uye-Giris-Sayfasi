@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Roboto:wght@100;300;400;700&display=swap');
+
+/* body özelleştirme */
+
+body{
+    --color-primary: rgba(50,120,70,0.5);
+    --color-primary-dark: rgba(10,70,30, 0.5);
+    --color-secondary: rgb(60,60,190);
+    --color-error: rgb(120,40,40);
+    --color-success: rgb(90,150,40);
+    --border-radius: 5px;
+
+}
+body{
+    background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark)), url(istockphoto-1224500457-612x612.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}   
+.container{
+    background-color: white;
+    width: 400px;
+    max-height: 400px;
+    transform: translate(50%, 50%);
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 20px red;
+    padding: 2rem;
+    margin: 1rem;
+    text-align: center;
+}
+.form_input--group{
+    margin-bottom: 1rem;
+}
+.form_input{
+    width: 100%;
+    padding: 0.7rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 2px solid #dddd;
+    background-color: #eee;
+    transition: background .3s, border-color .3s;
+}
+.form_input:focus{
+    border-color: var(--color-primary);
+    background-color: white;
+}
+.form_input-error-message{
+    margin-top: .5rem;
+    color: var(--color-error);
+}
+.form_button{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    color: #ffff;
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+}
+.form_button:hover{
+    background-color: var(--color-primary-dark);
+}
+.form_button:active{
+    transform: scale(0.95);
+}
+.form__link{
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+.form__link:hover{
+    text-decoration: underline;
+}
+.container, .form_input, .form_button{
+    font: 500 1rem;
+    font-family:'Roboto', sans-serif;
+}
